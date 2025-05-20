@@ -7,4 +7,3 @@
 3.⁠ ⁠Selsa Trikartika (4523210102)
 4.⁠ ⁠Rifky Budiyanto (4523210094)
 
-![janica6](https://github.com/user-attachments/assets/99ed0699-7ba7-443b-947b-67292ead388b)
