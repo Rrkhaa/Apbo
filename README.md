@@ -16,8 +16,8 @@ Claudyy.id adalah usaha penjualan photocard idol K-pop yang berlokasi di Jakarta
 Kebutuhan dalam Usaha 
 terdapat kebutuhan dalam menjalankan penjualan photocard/marchendise kpop yaitu :
 - Pengelolaan Produk
-    -- Pencatatan stok photocard
-    -- Pengkategorian photocard berdasarkan grup idol, member, dan jenis (album/merchandise)
+    - Pencatatan stok photocard
+    - Pengkategorian photocard berdasarkan grup idol, member, dan jenis (album/merchandise)
     -Penentuan harga berdasarkan tingkat kelangkaan dan popularitas member
 -Pengelolaan Pelanggan
     -Data pelanggan
