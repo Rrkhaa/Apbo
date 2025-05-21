@@ -33,13 +33,13 @@ terdapat kebutuhan dalam menjalankan penjualan photocard/marchendise kpop yaitu 
 
 Kendala dalam usaha :
 dalam melakukan penjualan photocard/marchendise kpop terdapat kendala seperti :
-    - Kesulitan mendapatkan stok photocard yang authentic.
-    - Perhitungan harga jual termasuk biaya impor yang mahal.
-    - Banyak customer di bawah umur yang hanya window shopping (Membeli dan direturn kembali)
-    - Keterbatasan waktu karena pemilik masih menempuh pendidikan.
-    - Tidak memungkinkan untuk memiliki toko fisik.
-    - Pengecekan keaslian photocard yang membutuhkan keahlian khusus.
-    - Berisiko mendapatkan scammer saat mencari photocard atau barang yang tidak tersedia, sehingga harus membelinya dari penjual lain
+- Kesulitan mendapatkan stok photocard yang authentic.
+- Perhitungan harga jual termasuk biaya impor yang mahal.
+- Banyak customer di bawah umur yang hanya window shopping (Membeli dan direturn kembali)
+- Keterbatasan waktu karena pemilik masih menempuh pendidikan.
+- Tidak memungkinkan untuk memiliki toko fisik.
+- Pengecekan keaslian photocard yang membutuhkan keahlian khusus.
+- Berisiko mendapatkan scammer saat mencari photocard atau barang yang tidak tersedia, sehingga harus membelinya dari penjual lain
 
 Aktor dan Rules
 
@@ -60,5 +60,6 @@ Aktor dan Rules
     - Menyediakan photocard (album, merchandise, event benefit)
 - Kurir/Jasa Pengiriman
     - Mengantarkan pesanan ke customer
+ 
 
 
