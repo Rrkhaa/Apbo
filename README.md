@@ -1,6 +1,7 @@
 # Apbo Tubes
-
-## $\textcolor{blue}{ Kelompok\ 11}$
+<p align="center">
+  $\textcolor{blue}{ Kelompok\ 11}$
+</p>
 
 1.⁠ ⁠Syoba Ismaunun (4523210107)
 2.⁠ ⁠Rakha abhirama (4523210088)
