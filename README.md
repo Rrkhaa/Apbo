@@ -44,21 +44,21 @@ dalam melakukan penjualan photocard/marchendise kpop terdapat kendala seperti :
 Aktor dan Rules
 
 - Admin/Owner
-      - Mengelola stok photocard
-      - Memverifikasi keaslian photocard
-      - Menetapkan harga
-      - Menangani keluhan pelanggan
-      - Mengelola promosi
-      - Memeriksa pembayaran
-      - Memproses pengiriman
+    - Mengelola stok photocard
+    - Memverifikasi keaslian photocard
+    - Menetapkan harga
+    - Menangani keluhan pelanggan
+    - Mengelola promosi
+    - Memeriksa pembayaran
+    - Memproses pengiriman
 - Customer
-      - Melihat katalog photocard
-      - Melakukan pemesanan
-      - Melakukan pembayaran
-      - Mengajukan keluhan jika ada masalah
+    - Melihat katalog photocard
+    - Melakukan pemesanan
+    - Melakukan pembayaran
+    - Mengajukan keluhan jika ada masalah
 - Supplier
-      - Menyediakan photocard (album, merchandise, event benefit)
+    - Menyediakan photocard (album, merchandise, event benefit)
 - Kurir/Jasa Pengiriman
-      - Mengantarkan pesanan ke customer
+    - Mengantarkan pesanan ke customer
 
 
