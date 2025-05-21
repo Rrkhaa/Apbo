@@ -1,0 +1,305 @@
+CREATE DATABASE photocard_store;
+USE photocard_store;
+
+-- DROP TABLES IF EXISTS
+DROP TABLE IF EXISTS promotion_photocards;
+DROP TABLE IF EXISTS order_freebies;
+DROP TABLE IF EXISTS order_items;
+DROP TABLE IF EXISTS reviews;
+DROP TABLE IF EXISTS orders;
+DROP TABLE IF EXISTS inventory_transactions;
+DROP TABLE IF EXISTS photocards;
+DROP TABLE IF EXISTS photocard_categories;
+DROP TABLE IF EXISTS idols;
+DROP TABLE IF EXISTS suppliers;
+DROP TABLE IF EXISTS freebies;
+DROP TABLE IF EXISTS promotions;
+DROP TABLE IF EXISTS users;
+
+-- START TRANSACTION
+START TRANSACTION;
+
+-- TABLE 1: users
+CREATE TABLE users (
+    user_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    full_name VARCHAR(100),
+    phone_number VARCHAR(15),
+    address TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    role ENUM('admin','customer') NOT NULL
+);
+
+-- TABLE 2: idols
+CREATE TABLE idols (
+    idol_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    idol_name VARCHAR(100) NOT NULL,
+    group_name VARCHAR(100),
+    agency VARCHAR(100),
+    popularity_rank INTEGER,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- TABLE 3: photocard_categories
+CREATE TABLE photocard_categories (
+    category_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    category_name VARCHAR(50) NOT NULL,
+    description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- TABLE 4: suppliers
+CREATE TABLE suppliers (
+    supplier_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    supplier_name VARCHAR(100) NOT NULL,
+    contact_person VARCHAR(100),
+    phone_number VARCHAR(15),
+    email VARCHAR(100),
+    address TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- TABLE 5: photocards
+CREATE TABLE photocards (
+    photocard_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    idol_id INTEGER NOT NULL,
+    category_id INTEGER NOT NULL,
+    photocard_name VARCHAR(255) NOT NULL,
+    album_name VARCHAR(255),
+    release_date DATE,
+    rarity_level ENUM('common','uncommon','rare','very_rare','exclusive'),
+    card_condition ENUM('mint','near_mint','good','fair'),
+    stock_quantity INTEGER DEFAULT 0,
+    purchase_price DECIMAL(10,2),
+    selling_price DECIMAL(10,2) NOT NULL,
+    image_url VARCHAR(255),
+    description TEXT,
+    is_verified BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (idol_id) REFERENCES idols(idol_id),
+    FOREIGN KEY (category_id) REFERENCES photocard_categories(category_id)
+);
+
+-- TABLE 6: inventory_transactions
+CREATE TABLE inventory_transactions (
+    transaction_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    photocard_id INTEGER NOT NULL,
+    supplier_id INTEGER,
+    transaction_type ENUM('purchase','sale','adjustment') NOT NULL,
+    quantity INTEGER NOT NULL,
+    unit_price DECIMAL(10,2) NOT NULL,
+    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    notes TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (photocard_id) REFERENCES photocards(photocard_id),
+    FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id)
+);
+
+-- TABLE 7: orders
+CREATE TABLE orders (
+    order_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    user_id INTEGER NOT NULL,
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status ENUM('pending','paid','processing','shipped','delivered','canceled','refunded') NOT NULL,
+    shipping_address TEXT NOT NULL,
+    shipping_method VARCHAR(50),
+    tracking_number VARCHAR(100),
+    total_amount DECIMAL(10,2) NOT NULL,
+    payment_method ENUM('transfer_bank','qris','e_wallet','credit_card'),
+    payment_status ENUM('pending','completed','failed','refunded'),
+    notes TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+-- TABLE 8: order_items
+CREATE TABLE order_items (
+    item_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    order_id INTEGER NOT NULL,
+    photocard_id INTEGER NOT NULL,
+    quantity INTEGER NOT NULL,
+    unit_price DECIMAL(10,2) NOT NULL,
+    subtotal DECIMAL(10,2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),
+    FOREIGN KEY (photocard_id) REFERENCES photocards(photocard_id)
+);
+
+-- TABLE 9: freebies
+CREATE TABLE freebies (
+    freebie_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    stock_quantity INTEGER DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- TABLE 10: order_freebies
+CREATE TABLE order_freebies (
+    order_freebie_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    order_id INTEGER NOT NULL,
+    freebie_id INTEGER NOT NULL,
+    quantity INTEGER NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),
+    FOREIGN KEY (freebie_id) REFERENCES freebies(freebie_id)
+);
+
+-- TABLE 11: reviews
+CREATE TABLE reviews (
+    review_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    order_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
+    rating INTEGER NOT NULL,
+    comment TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+-- TABLE 12: promotions
+CREATE TABLE promotions (
+    promotion_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    discount_type ENUM('percentage','fixed_amount','buy_get') NOT NULL,
+    discount_value DECIMAL(10,2) NOT NULL,
+    start_date TIMESTAMP NOT NULL,
+    end_date TIMESTAMP NOT NULL,
+    is_active BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- TABLE 13: promotion_photocards
+CREATE TABLE promotion_photocards (
+    promotion_photocard_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    promotion_id INTEGER NOT NULL,
+    photocard_id INTEGER NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (promotion_id) REFERENCES promotions(promotion_id),
+    FOREIGN KEY (photocard_id) REFERENCES photocards(photocard_id)
+);
+
+-- INSERT DATA\
+
+-- Users
+INSERT INTO users (username, password, email, full_name, phone_number, address, role) VALUES
+('budi', 'hashedpass1', 'budi@email.com', 'Budi', '08123456789', 'Jl. Merdeka No. 10, Jakarta', 'customer'),
+('Kimi', 'hashedpass2', 'kimi@email.com', 'Kimi', '08234567890', 'Jl. Sudirman No. 25, Bandung', 'customer'),
+('adam', 'hashedpass3', 'adam1@store.com', 'Adam', '08345678901', 'Jl. Thamrin No. 5, Jakarta', 'admin'),
+('adawong', 'hashedpass4', 'adawong@email.com', 'Adawong', '08456789012', 'Jl. Gajah Mada No. 15, Surabaya', 'customer'),
+('sarah_lee', 'hashedpass5', 'sarah@email.com', 'Sarah Lee', '08567890123', 'Jl. Diponegoro No. 20, Yogyakarta', 'customer');
+
+-- Idols
+INSERT INTO idols (idol_name, group_name, agency, popularity_rank) VALUES
+('Kim Taeyeon', 'Girls'' Generation', 'SM Entertainment', 1),
+('Jeon Jungkook', 'BTS', 'HYBE', 2),
+('Roseanne Park', 'BLACKPINK', 'YG Entertainment', 3),
+('Mark Lee', 'NCT', 'SM Entertainment', 4),
+('Bae Suzy', 'Miss A', 'JYP Entertainment', 5);
+
+-- Photocard Categories
+INSERT INTO photocard_categories (category_name, description) VALUES
+('Album PCs', 'Photocards included in official albums'),
+('POBs', 'Pre-order benefits from specific stores'),
+('Fansign', 'Photocards from fansign events'),
+('Season''s Greetings', 'From seasonal merchandise sets'),
+('Concert', 'Photocards from concert merchandise');
+
+-- Suppliers
+INSERT INTO suppliers (supplier_name, contact_person, phone_number, email, address) VALUES
+('K-Pop Merch Official', 'Lee Minho', '02112345678', 'contact@kpopmerch.com', 'Seoul, South Korea'),
+('Idol World', 'Park Jisung', '02223456789', 'info@idolworld.com', 'Busan, South Korea'),
+('Hallyu Store', 'Kim Yuna', '03134567890', 'sales@hallyustore.com', 'Incheon, South Korea'),
+('Star Collection', 'Choi Soobin', '02745678901', 'hello@starcollection.com', 'Daegu, South Korea'),
+('Dream K-Pop', 'Jung Hoseok', '02456789012', 'support@dreamkpop.com', 'Gwangju, South Korea');
+
+-- Photocards
+INSERT INTO photocards (idol_id, category_id, photocard_name, album_name, release_date, rarity_level, card_condition, stock_quantity, purchase_price, selling_price, image_url, description, is_verified) VALUES
+(1, 1, 'Taeyeon - INVU', 'INVU', '2022-02-14', 'rare', 'mint', 50, 50000, 75000, 'http://example.com/taeyeon1.jpg', 'Official album photocard', TRUE),
+(2, 2, 'Jungkook - Proof POB', 'Proof', '2022-06-10', 'very_rare', 'near_mint', 30, 70000, 120000, 'http://example.com/jungkook1.jpg', 'Weverse pre-order benefit', TRUE),
+(3, 3, 'Rosé - Fansign', 'The Album', '2020-10-02', 'exclusive', 'good', 10, 100000, 200000, 'http://example.com/rose1.jpg', 'Fansign event photocard', TRUE),
+(4, 4, 'Mark - Season''s Greetings', 'NCT 2023', '2023-01-01', 'uncommon', 'mint', 40, 40000, 60000, 'http://example.com/mark1.jpg', '2023 Season''s Greetings', TRUE),
+(5, 5, 'Suzy - Concert', 'Yes? No?', '2017-03-25', 'rare', 'fair', 15, 60000, 90000, 'http://example.com/suzy1.jpg', 'Concert exclusive photocard', TRUE);
+
+-- Inventory Transactions
+INSERT INTO inventory_transactions (photocard_id, supplier_id, transaction_type, quantity, unit_price, notes) VALUES
+(1, 1, 'purchase', 50, 50000, 'Initial stock'),
+(2, 2, 'purchase', 30, 70000, 'Pre-order stock'),
+(3, 3, 'purchase', 10, 100000, 'Limited fansign cards'),
+(4, 4, 'purchase', 40, 40000, 'Seasonal merchandise'),
+(5, 5, 'purchase', 15, 60000, 'Concert merch restock');
+
+-- Orders
+INSERT INTO orders (user_id, status, shipping_address, shipping_method, tracking_number, total_amount, payment_method, payment_status) VALUES
+(1, 'delivered', 'Jl. Merdeka No. 10, Jakarta', 'JNE', 'JNE123456789', 75000, 'transfer_bank', 'completed'),
+(2, 'shipped', 'Jl. Sudirman No. 25, Bandung', 'SiCepat', 'SICEPAT987654', 240000, 'qris', 'completed'),
+(3, 'processing', 'Jl. Thamrin No. 5, Jakarta', 'J&T', NULL, 180000, 'e_wallet', 'paid'),
+(4, 'pending', 'Jl. Gajah Mada No. 15, Surabaya', NULL, NULL, 120000, NULL, 'pending'),
+(5, 'delivered', 'Jl. Diponegoro No. 20, Yogyakarta', 'Ninja', 'NINJA456123', 90000, 'credit_card', 'completed');
+
+-- Order Items
+INSERT INTO order_items (order_id, photocard_id, quantity, unit_price, subtotal) VALUES
+(1, 1, 1, 75000, 75000),
+(2, 2, 2, 120000, 240000),
+(3, 3, 1, 200000, 200000),
+(4, 4, 2, 60000, 120000),
+(5, 5, 1, 90000, 90000);
+
+-- Freebies
+INSERT INTO freebies (name, description, stock_quantity) VALUES
+('Sticker Pack', 'Cute K-Pop themed stickers', 100),
+('Poster', 'Official group poster', 50),
+('Keychain', 'Idol-themed keychain', 75),
+('Bookmark', 'Official merchandise bookmark', 120),
+('Photo Stand', 'Mini photo standee', 60);
+
+-- Order Freebies
+INSERT INTO order_freebies (order_id, freebie_id, quantity) VALUES
+(1, 1, 2),
+(2, 2, 1),
+(3, 3, 1),
+(4, 4, 3),
+(5, 5, 1);
+
+-- Reviews
+INSERT INTO reviews (order_id, user_id, rating, comment) VALUES
+(1, 1, 5, 'Perfect condition, fast delivery!'),
+(2, 2, 4, 'Love the photocards, but shipping took a while'),
+(3, 3, 5, 'Amazing rare find, worth every penny'),
+(4, 4, 3, 'Good but packaging could be better'),
+(5, 5, 5, 'Excellent service, will buy again!');
+
+-- Promotions
+INSERT INTO promotions (name, description, discount_type, discount_value, start_date, end_date, is_active) VALUES
+('Summer Sale', 'Big summer discounts', 'percentage', 15.00, '2025-06-01 00:00:00', '2025-06-30 23:59:59', TRUE),
+('New Customer', 'Discount for first-time buyers', 'fixed_amount', 20000.00, '2025-01-01 00:00:00', '2025-12-31 23:59:59', TRUE),
+('BTS Anniversary', 'Special BTS items sale', 'percentage', 10.00, '2025-06-13 00:00:00', '2025-06-20 23:59:59', FALSE),
+('Buy 1 Get 1', 'Buy one get one free on selected items', 'buy_get', 0.00, '2025-05-01 00:00:00', '2025-05-15 23:59:59', FALSE),
+('Black Friday', 'Huge Black Friday deals', 'percentage', 30.00, '2025-11-24 00:00:00', '2025-11-27 23:59:59', TRUE);
+
+-- Promotion Photocards
+INSERT INTO promotion_photocards (promotion_id, photocard_id) VALUES
+(1, 1),
+(1, 2),
+(2, 3),
+(3, 2),
+(4, 4);
+
+-- COMMIT TRANSACTION
+COMMIT;}
