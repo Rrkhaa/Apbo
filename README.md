@@ -3,11 +3,12 @@
   $\textcolor{blue}{ Kelompok\ 11}$
 </p>
 
-1.⁠ ⁠Syoba Ismaunun (4523210107)
-2.⁠ ⁠Rakha abhirama (4523210088)
-3.⁠ ⁠Selsa Trikartika (4523210102)
-4.⁠ ⁠Rifky Budiyanto (4523210094)
-
+<p> 1.⁠ ⁠Syoba Ismaunun (4523210107)  </p>
+<p> 2.⁠ ⁠Rakha abhirama (4523210088)  </p>
+<p> 3.⁠ ⁠Selsa Trikartika (4523210102) </p>
+<p> 4.⁠ ⁠Rifky Budiyanto (4523210094) </p>
+<p> 
+  </p>
 <div align="center">
 <b>Bukti wawancara : 
 </b>
