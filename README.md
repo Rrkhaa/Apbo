@@ -18,28 +18,28 @@ terdapat kebutuhan dalam menjalankan penjualan photocard/marchendise kpop yaitu 
 - Pengelolaan Produk
     - Pencatatan stok photocard
     - Pengkategorian photocard berdasarkan grup idol, member, dan jenis (album/merchandise)
-    -Penentuan harga berdasarkan tingkat kelangkaan dan popularitas member
--Pengelolaan Pelanggan
+    - Penentuan harga berdasarkan tingkat kelangkaan dan popularitas member
+- Pengelolaan Pelanggan
     -Data pelanggan
     -Riwayat pembelian
     -Penanganan keluhan
--Pengelolaan Transaksi
-    -Pemrosesan pesanan
-    -Sistem pembayaran (QRIS, transfer bank, e-Wallet, kartu kredit)
-    -Pengemasan dan pengiriman
--Pemasaran
-    -Pengelolaan promosi (freebies, buy 1 get 1)
-    -Pengumuman ketersediaan stok baru
+- Pengelolaan Transaksi
+    - Pemrosesan pesanan
+    - Sistem pembayaran (QRIS, transfer bank, e-Wallet, kartu kredit)
+    - Pengemasan dan pengiriman
+- Pemasaran
+    - Pengelolaan promosi (freebies, buy 1 get 1)
+    - Pengumuman ketersediaan stok baru
 
 Kendala dalam usaha :
 dalam melakukan penjualan photocard/marchendise kpop terdapat kendala seperti :
-    1. Kesulitan mendapatkan stok photocard yang authentic.
-    2. Perhitungan harga jual termasuk biaya impor yang mahal.
-    3. Banyak customer di bawah umur yang hanya window shopping (Membeli dan direturn kembali)
-    4. Keterbatasan waktu karena pemilik masih menempuh pendidikan.
-    5. Tidak memungkinkan untuk memiliki toko fisik.
-    6. Pengecekan keaslian photocard yang membutuhkan keahlian khusus.
-    7. Berisiko mendapatkan scammer saat mencari photocard atau barang yang tidak tersedia, sehingga harus membelinya dari penjual lain
+    - Kesulitan mendapatkan stok photocard yang authentic.
+    - Perhitungan harga jual termasuk biaya impor yang mahal.
+    - Banyak customer di bawah umur yang hanya window shopping (Membeli dan direturn kembali)
+    - Keterbatasan waktu karena pemilik masih menempuh pendidikan.
+    - Tidak memungkinkan untuk memiliki toko fisik.
+    - Pengecekan keaslian photocard yang membutuhkan keahlian khusus.
+    - Berisiko mendapatkan scammer saat mencari photocard atau barang yang tidak tersedia, sehingga harus membelinya dari penjual lain
 
 Aktor dan Rules
 
