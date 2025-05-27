@@ -17,3 +17,8 @@
 <div align="center">
 <img width="751" alt="image" src="https://github.com/user-attachments/assets/2b432544-cbc9-4a8c-b615-ba4f75dc1ca7" />
 </div>
+
+<p align="center">
+  class diagram
+
+![image](https://github.com/user-attachments/assets/1ad9724b-adef-4026-8c4c-82b8a2d667a2)
