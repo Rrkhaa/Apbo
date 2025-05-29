@@ -60,6 +60,45 @@
   </ul>
 </div>
 
+<div align="left">
+  <p><strong>Aktor dan Rules</strong></p>
+
+  <ul>
+    <li><strong>Admin / Owner</strong>
+      <ul>
+        <li>Mengelola stok photocard</li>
+        <li>Memverifikasi keaslian photocard</li>
+        <li>Menetapkan harga</li>
+        <li>Menangani keluhan pelanggan</li>
+        <li>Mengelola promosi</li>
+        <li>Memeriksa pembayaran</li>
+        <li>Memproses pengiriman</li>
+      </ul>
+    </li>
+
+    <li><strong>Customer</strong>
+      <ul>
+        <li>Melihat katalog photocard</li>
+        <li>Melakukan pemesanan</li>
+        <li>Melakukan pembayaran</li>
+        <li>Mengajukan keluhan jika ada masalah</li>
+      </ul>
+    </li>
+
+    <li><strong>Supplier</strong>
+      <ul>
+        <li>Menyediakan photocard (album, merchandise, event benefit)</li>
+      </ul>
+    </li>
+
+    <li><strong>Kurir / Jasa Pengiriman</strong>
+      <ul>
+        <li>Mengantarkan pesanan ke customer</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
 <div align="center">
   <strong>Tabel Relasi:</strong><br/>
   <img width="751" alt="Tabel Relasi" src="https://github.com/user-attachments/assets/af1f19da-6b95-453b-b03e-851e9ce7da5e"/>
