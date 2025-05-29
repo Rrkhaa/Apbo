@@ -8,9 +8,6 @@
 <p>3. Selsa Trikartika (4523210102) - Bagian Tugas: ERD, Master & Transaksi, Database</p>
 <p>4. Rifky Budiyanto (4523210094) - Bagian Tugas: Wireframe/Mockup</p>
 
-<div align="left">
-  <strong>Topik: Claudyy.id (Usaha Penjualan Photocard)</strong>
-</div>
 
 <div align="left">
     <strong>Topik: Claudyy.id (Usaha Penjualan Photocard)</strong>
