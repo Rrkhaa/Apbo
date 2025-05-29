@@ -16,6 +16,14 @@
 <div align ="Jusfity">
   <p>Claudyy.id adalah usaha penjualan photocard idol K-pop yang berlokasi di Jakarta Selatan. Usaha ini menjual photocard original dari album dan merchandise official yang dikeluarkan oleh agensi idol. Penjualan dilakukan secara online melalui TikTok Shop. Usaha ini dimulai dari penjualan koleksi photocard yang langka (rare) dan berkembang untuk menjual berbagai jenis photocard. </p>
   </div>
+<div align="Left">
+  <p>Kendala dalam usaha ?</p>
+  <p>Dalam usaha penjualan photocard terdapat beberapa kendala, seperti : 
+    -Kesulitan mendapatkan stok photocard yang authentic.
+    -Perhitungan harga jual termasuk biaya impor yang mahal.
+    -Banyak customer di bawah umur yang hanya window shopping (Membeli dan direturn kembali).
+    -Keterbatasan waktu karena pemilik masih menempuh pendidikan.
+  </p>
 
 </p>
 <div align="center">
