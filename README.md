@@ -104,12 +104,7 @@
     </ul>
   </div>
 
-  <div align="center">
-    <strong>Tabel Relasi:</strong><br />
-    <img width="751" alt="Tabel Relasi" src="https://github.com/user-attachments/assets/af1f19da-6b95-453b-b03e-851e9ce7da5e" />
-  </div>
-
-  <br />
+   <br />
 
   <div align="center">
     <strong>Bukti Wawancara:</strong><br />
@@ -117,6 +112,11 @@
   </div>
 
   <br />
+
+  <div align="center">
+    <strong>Tabel Relasi:</strong><br />
+    <img width="751" alt="Tabel Relasi" src="https://github.com/user-attachments/assets/af1f19da-6b95-453b-b03e-851e9ce7da5e" />
+  </div>
 
   <div align="center">
     <strong>Class Diagram:</strong><br />
