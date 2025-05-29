@@ -18,13 +18,13 @@
 <div align="Left">
   <p>Kendala dalam usaha ?</p>
   <p>Dalam usaha penjualan photocard terdapat beberapa kendala, seperti : 
-    <br>-Kesulitan mendapatkan stok photocard yang authentic.</br>
-    <br>-Perhitungan harga jual termasuk biaya impor yang mahal.</br>
-    <br>-Banyak customer di bawah umur yang hanya window shopping (Membeli dan direturn kembali).</br>
-    <br>-Keterbatasan waktu karena pemilik masih menempuh pendidikan.</br>
-    <br>-Tidak memungkinkan untuk memiliki toko fisik. </br>
-    <br>-Pengecekan keaslian photocard yang membutuhkan keahlian khusus.</br>
-    <br>-Berisiko mendapatkan scammer saat mencari photocard atau barang yang tidak tersedia, sehingga harus membelinya dari penjual lain</br>
+    <br>-Kesulitan mendapatkan stok photocard yang authentic.
+    -Perhitungan harga jual termasuk biaya impor yang mahal.
+    -Banyak customer di bawah umur yang hanya window shopping (Membeli dan direturn kembali).
+    -Keterbatasan waktu karena pemilik masih menempuh pendidikan.
+    -Tidak memungkinkan untuk memiliki toko fisik. 
+    -Pengecekan keaslian photocard yang membutuhkan keahlian khusus.
+    -Berisiko mendapatkan scammer saat mencari photocard atau barang yang tidak tersedia, sehingga harus membelinya dari penjual lain</br>
   </p>
 
 </p>
