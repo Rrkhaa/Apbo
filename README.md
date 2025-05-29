@@ -104,14 +104,10 @@
     </ul>
   </div>
 
-   <br />
-
   <div align="center">
     <strong>Bukti Wawancara:</strong><br />
     <img width="751" alt="Bukti Wawancara" src="https://github.com/user-attachments/assets/2b432544-cbc9-4a8c-b615-ba4f75dc1ca7" />
   </div>
-
-  <br />
 
   <div align="center">
     <strong>Tabel Relasi:</strong><br />
