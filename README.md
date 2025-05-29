@@ -58,13 +58,9 @@
     </li>
     
     <li><strong>Pemasaran</strong>
-      <ul>
-        <li>Pengelolaan promosi (freebies, buy 1 get 1, dll)</li>
-        <li>Pengumuman ketersediaan stok baru kepada pelanggan</li>
-      </ul>
-    </li>
-  </ul>
-</div>
+    <ul>
+      <li>Pengelolaan promosi (freebies, buy 1 get 1)</li>
+      <li>Pengumuman ketersediaan stok baru</li>
 
 <div align="left">
   <h3>Aktor dan Rules</h3>
