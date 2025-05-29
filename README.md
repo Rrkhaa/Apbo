@@ -3,10 +3,10 @@
   $\textcolor{blue}{ Kelompok\ 11}$
 </p>
 
-<p> 1.⁠ ⁠Syoba Ismaunun (4523210107)  </p>
-<p> 2.⁠ ⁠Rakha abhirama (4523210088)  </p>
-<p> 3.⁠ ⁠Selsa Trikartika (4523210102) </p>
-<p> 4.⁠ ⁠Rifky Budiyanto (4523210094) </p>
+<p> 1.⁠ ⁠Syoba Ismaunun (4523210107) Bagian Tugas (Usecase,Activity Diagram) </p>
+<p> 2.⁠ ⁠Rakha abhirama (4523210088) Bagian Tugas (Class Diagram, Database) </p>
+<p> 3.⁠ ⁠Selsa Trikartika (4523210102) Bagian Tugas (ERD,Master dan Transaksi) </p>
+<p> 4.⁠ ⁠Rifky Budiyanto (4523210094) Bagian Tugas (Wireframe/Mockup) </p>
 <p> 
   </p>
 <div align="center">
