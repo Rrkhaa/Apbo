@@ -30,6 +30,43 @@
   </ul>
 </div>
 
+<div align="left">
+  <p><b>Kebutuhan dalam Usaha</b></p>
+  
+  <ul>
+    <li><b>Pengelolaan Produk</b>
+      <ul>
+        <li>Pencatatan stok photocard</li>
+        <li>Pengkategorian photocard berdasarkan grup idol, member, dan jenis (album/merchandise)</li>
+        <li>Penentuan harga berdasarkan tingkat kelangkaan dan popularitas member</li>
+      </ul>
+    </li>
+
+    <li><b>Pengelolaan Pelanggan</b>
+      <ul>
+        <li>Pencatatan data pelanggan</li>
+        <li>Riwayat pembelian pelanggan</li>
+        <li>Penanganan keluhan atau komplain pelanggan</li>
+      </ul>
+    </li>
+
+    <li><b>Pengelolaan Transaksi</b>
+      <ul>
+        <li>Pemrosesan pesanan secara online</li>
+        <li>Sistem pembayaran (QRIS, transfer bank, e-Wallet, kartu kredit)</li>
+        <li>Pengemasan dan pengiriman produk</li>
+      </ul>
+    </li>
+
+    <li><b>Pemasaran</b>
+      <ul>
+        <li>Pengelolaan promosi (freebies, buy 1 get 1, dll)</li>
+        <li>Pengumuman ketersediaan stok baru kepada pelanggan</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
 <div align="center">
   <b>Tabel Relasi:</b>
 </div>
