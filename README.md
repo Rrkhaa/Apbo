@@ -109,6 +109,22 @@
     <img width="751" alt="Bukti Wawancara" src="https://github.com/user-attachments/assets/2b432544-cbc9-4a8c-b615-ba4f75dc1ca7" />
   </div>
 
+  <div align="left">
+  <h3>Tabel Naster</h3>
+    <ul>
+      <li>customers - Data pelanggan</li>
+      <li>users - Data pengguna sistem</li>
+      <li>admins - Data administrator</li>
+      <li>promotions - Data promosi</li>
+      <li>promotion_photocards - Data promosi photocard</li>
+      <li>photocards - Data kartu photocard</li>
+      <li>photocard_categories - Kategori photocard</li>
+      <li>freebies - Data bonus/hadiah gratis</li>
+      <li>suppliers - Data pemasok/supplier</li>
+      <li>idols - Data idol</li>
+    </ul>
+  </div>
+
   <div align="center">
     <strong>Tabel Relasi:</strong><br />
     <img width="751" alt="Tabel Relasi" src="https://github.com/user-attachments/assets/af1f19da-6b95-453b-b03e-851e9ce7da5e" />
