@@ -1,6 +1,6 @@
 # Apbo Tubes
 <p align="center">
-  <span style="color:blue;">Kelompok 11</span>
+  $\textcolor{blue}{ Kelompok\ 11}$
 </p>
 
 <p>1.⁠ ⁠Syoba Ismaunun (4523210107) - Bagian Tugas: Usecase, Activity Diagram</p>
