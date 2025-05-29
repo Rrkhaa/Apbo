@@ -56,6 +56,7 @@
         <li>Pengemasan dan pengiriman produk</li>
       </ul>
     </li>
+    
     <li><strong>Pemasaran</strong>
       <ul>
         <li>Pengelolaan promosi (freebies, buy 1 get 1, dll)</li>
