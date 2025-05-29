@@ -18,7 +18,7 @@
 <div align="Left">
   <p>Kendala dalam usaha ?</p>
   <p>Dalam usaha penjualan photocard terdapat beberapa kendala, seperti : 
-    -Kesulitan mendapatkan stok photocard yang authentic.
+    <br>-Kesulitan mendapatkan stok photocard yang authentic.</br>
     -Perhitungan harga jual termasuk biaya impor yang mahal.
     -Banyak customer di bawah umur yang hanya window shopping (Membeli dan direturn kembali).
     -Keterbatasan waktu karena pemilik masih menempuh pendidikan.
