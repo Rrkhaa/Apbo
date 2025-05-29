@@ -19,7 +19,7 @@
 
 </p>
 <div align="center">
-<b>Bukti wawancara : 
+<b>Tabel Relasi : 
 </b>
 </div>
 
