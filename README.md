@@ -24,8 +24,7 @@
 </div>
 
 <div align="center">
-<img width="751" alt="image" src=![Tabel Relasi RPL](https://github.com/user-attachments/assets/af1f19da-6b95-453b-b03e-851e9ce7da5e)
- />
+<img width="751" alt="image" src="https://github.com/user-attachments/assets/af1f19da-6b95-453b-b03e-851e9ce7da5e")/>
 </div>
   
 </p>
