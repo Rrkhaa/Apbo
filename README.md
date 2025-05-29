@@ -110,7 +110,7 @@
   </div>
 
   <div align="left">
-  <h3>Tabel Naster</h3>
+  <h3>Tabel Master</h3>
     <ul>
       <li>customers - Data pelanggan</li>
       <li>users - Data pengguna sistem</li>
@@ -124,7 +124,15 @@
       <li>idols - Data idol</li>
     </ul>
   </div>
-
+<div align="left">
+  <h3>Tabel Transaksi</h3>
+    <ul>
+      <li>orders - Transaksi pesanan utama</li>
+      <li>order_items - Detail item dalam pesanan</li>
+      <li>order_freebies - Detail freebie dalam pesanan</li>
+      <li>inventory_transactions - Transaksi pergerakan stok</li>
+    </ul>
+  </div>
   <div align="center">
     <strong>Tabel Relasi:</strong><br />
     <img width="751" alt="Tabel Relasi" src="https://github.com/user-attachments/assets/af1f19da-6b95-453b-b03e-851e9ce7da5e" />
