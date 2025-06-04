@@ -1,7 +1,10 @@
 # Apbo Tubes
-<p align="center">
-  $\textcolor{blue}{ Kelompok\ 11}$
-</p>
+
+<h1 align="center">
+  <code style="color : aqua">Kelompok 11</code>
+</h1>
+  
+
 
 <p>1. Syoba Ismaunun (4523210107) - Bagian Tugas: Usecase, Activity Diagram</p>
 <p>2. Rakha Abhirama (4523210088) - Bagian Tugas: Class Diagram, Sequence Diagram</p>
